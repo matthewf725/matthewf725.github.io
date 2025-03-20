@@ -1,6 +1,7 @@
 {
-  "name": "portfolio-website",
+  "name": "website",
   "version": "1.0.0",
+  "homepage": "https://matthewf725.github.io/",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.10.4",
@@ -14,8 +15,10 @@
     "react-scripts": "^3.0.1"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "cross-env NODE_OPTIONS=--openssl-legacy-provider react-scripts start",
-    "build": "react-scripts build"
+    "build": "react-scripts --openssl-legacy-provider build"
   },
   "browserslist": {
     "production": [
@@ -30,6 +33,7 @@
     ]
   },
   "devDependencies": {
-    "cross-env": "^7.0.3"
+    "cross-env": "^7.0.3",
+    "gh-pages": "^6.3.0"
   }
 }
